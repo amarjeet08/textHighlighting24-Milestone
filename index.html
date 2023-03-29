@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="my-paragraph" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro excepturi reiciendis quam quod, magni, ipsa fugiat architecto placeat autem sit maiores vero iste explicabo assumenda tenetur, minus quisquam eligendi tempora nesciunt doloribus a. Veritatis cumque quisquam obcaecati ipsa explicabo id totam nostrum ipsam. Aliquid, earum minima sit obcaecati voluptatem culpa velit vel veritatis? Impedit modi soluta quo esse, necessitatibus, est eligendi iste assumenda dolor cumque tenetur? Recusandae dolore tempore aliquam voluptatem officia explicabo similique, maiores dolores dignissimos? Quidem voluptatum rerum omnis est laborum repudiandae blanditiis, corporis praesentium sapiente magnam fugit voluptatem aut temporibus placeat velit unde earum reprehenderit laboriosam dolorem.</p>
+    <script>
+        const paragraph = document.getElementById("my-paragraph")
+        const words = paragraph.innerText.split(' ');
+        words.forEach((word) => {
+            if(word.length > 8){
+                paragraph.innerHTML = paragraph.innerHTML.replace(word,`<span class = "highlight">${word}</span>`);
+            }
+        })
+    </script>
+</body>
+</html>
